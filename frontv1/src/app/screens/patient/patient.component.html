@@ -1,0 +1,41 @@
+<div id="main-div" class="container">
+
+  <div id="header-div" class="container">
+    <button class="close-button" (click)="signInForm()" type="button">&times;</button>
+    <p id="headertext">Hello User (User Type: Patient)</p>
+    <p>My Appointments</p>
+
+    <app-apt-table></app-apt-table>
+  </div>
+
+  <div class="container">
+  <p >Create new Appointment</p>
+  <div id="tablediv">
+    <table id="slotTable">
+      <tbody>
+        <tr>
+          <td>Choose Doctor</td>
+          <td>
+            <select #teams (change)="onSelectedDoc(teams.value)" id="doctor" name="doctor">
+              <option value="default" hidden>Select Doctor</option>
+              <option *ngFor="let doc of doctors" [value]="doc">{{doc}}</option>
+          </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Appointment</td>
+          <td>
+            <select id="doctor" name="doctor">
+              <option value="default" hidden>Select Appointment</option>
+              <option *ngFor="let slot of slots" [value]="slot">{{slot}}</option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button (click)="addSlot()" id="addSlot">Add Slot</button>
+  </div>
+  </div>
+
+</div>

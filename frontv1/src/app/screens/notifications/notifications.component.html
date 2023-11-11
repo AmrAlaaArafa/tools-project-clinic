@@ -1,0 +1,16 @@
+<div id="main-div" class="container">
+
+  <div id="header-div" class="container">
+    <button class="close-button" (click)="backToSlots()" type="button">&times;</button>
+    <p id="headertext">Hello User (User Type: Doctor)</p>
+    <p>My notifications</p>
+    <app-slots-table></app-slots-table>
+  </div>
+
+  <div class="container">
+    <div id="tablediv">
+      <button (click)="refresh()" id="refresh">Refresh</button>
+    </div>
+  </div>
+
+</div>

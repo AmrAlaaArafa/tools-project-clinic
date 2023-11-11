@@ -1,0 +1,47 @@
+tr,th,td,table,tbody{
+  color: white;
+}
+
+
+
+#slotTable{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    /* ?If you want it to take the whole width */
+    /* width: 100%; */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+  }
+  
+  #slotTable td, #slotTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  /* ? if you want to alternate color */
+  /* #slotTable tr:nth-child(even){background-color: #161b21;} */
+  
+  /* ?if you want to change color when hovering */
+  /* #slotTable tr:hover {background-color: #ddd;} */
+  
+  #slotTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #161b21;
+    color: white;
+  }
+  a, a:visited, a:hover, a:active {
+    color: #407bd0;
+  }
+
+  button{
+    padding: 0;
+    border: none;
+    background: none;
+    color: #407bd0;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: #407bd0;
+    font-size: 16px;
+  }

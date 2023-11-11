@@ -1,0 +1,36 @@
+<form (ngSubmit)="signUp()" id = "signup-form"  method="post">
+  <div id="main-div" class="container">
+
+    <label><b>Email</b></label>
+    <input type="text" name="email" placeholder="Enter Email" [(ngModel)]="email" required>
+
+    <label><b>Name</b></label>
+    <input type="text" name="name" placeholder="Enter Name" [(ngModel)]="name" required>
+
+    <label><b>Password</b></label>
+    <input style="margin-bottom: 10px;" type="password" placeholder="Enter Password" name="password" [(ngModel)]="password" required>
+
+
+    <div style="margin: 10px;">
+      <label style="padding-right: 10px;"><b>User Type</b></label>
+      <span *ngFor="let tip of types">
+        <input  type="radio" id="{{tip.id}}" value="{{tip.value}}" name="type" [(ngModel)]="type">
+        <label style="padding-right: 10px;"  for="{{tip.value}}">{{tip.value}}</label>
+      </span>
+    </div>
+
+    <!-- ? THE EVENT EMITTER NOT WORKING  -->
+    <button  type="submit">Sign up</button>
+
+    <!-- ?this also works -->
+    <!-- <button type="submit" (click)="login()" >Sign in</button> -->
+
+    <!-- TODO: REMOVE THE FUCKING BUTTON COMPONENT -->
+    <!-- <app-button title="Sign in" (btnClick)="login()"></app-button> -->
+
+  </div>
+
+  <div class="container" style=" text-align: center;">
+    <label class="psw">Already have an account? <a href="http://localhost:4200/login">Sign in</a></label>
+  </div>
+</form>

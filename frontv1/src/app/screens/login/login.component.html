@@ -1,0 +1,21 @@
+<form (ngSubmit)="login()" id = "login-form" action="/action_page.php" method="post">
+  <div id="main-div" class="container">
+    <label ><b>Email</b></label>
+    <input type="text" name="email" placeholder="Enter Email" [(ngModel)]="email" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="password" required>
+
+    <!-- ? THE EVENT EMITTER NOT WORKING  -->
+    <button  type="submit">Sign in</button>
+    <!-- ?this also works -->
+    <!-- <button type="submit" (click)="login()" >Sign in</button> -->
+    <!-- TODO: REMOVE THE FUCKING BUTTON COMPONENT -->
+    <!-- <app-button title="Sign in" (btnClick)="login()"></app-button> -->
+
+  </div>
+
+  <div class="container" style=" text-align: center;">
+    <label class="psw">New user? <a href="http://localhost:4200/signup">Sign up</a></label>
+  </div>
+</form>
