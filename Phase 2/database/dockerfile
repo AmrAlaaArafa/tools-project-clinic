@@ -1,0 +1,11 @@
+FROM postgres
+
+# Set environment variables
+ENV POSTGRES_PASSWORD nnn123nnn
+ENV POSTGRES_USER postgres
+
+# Copy any additional initialization scripts or configuration files
+COPY . .
+
+# Expose the PostgreSQL port
+EXPOSE 5432
