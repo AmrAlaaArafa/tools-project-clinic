@@ -1,0 +1,42 @@
+<div id="main-div" class="container">
+
+  <div id="header-div" class="container">
+    <button id="close-button" (click)="signInForm()" type="button">&times;</button>
+    <p id="headertext">Hello {{doctorName}} (User Type: Doctor)</p>
+    <p>My Slots</p>
+    <table id="slotTable">
+      <tbody>
+        <tr>
+          <!-- ?THIS FOR LOOP WILL GENERATE THE HEADER OF THE TABLE(DATE - HOUR)  -->
+          <th>Date</th>
+          <th>Hour</th>
+        </tr>
+        <!-- ? THE OUTER FOR EACH LOOP WILL INCREMENT ON EACH ITEM IN THE DB -->
+        <tr *ngFor="let item of slots">
+          <!-- ? THE INNER FOR EACH LOOP WILL INCREMENT ON EACH COLUMN IN THE DB -->
+          <td *ngFor="let field of item | keyvalue">{{field.value}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="container">
+  <p >Create new slot</p>
+  <div id="tablediv">
+    <table id="slotTable">
+      <tbody>
+        <tr>
+          <td>Date</td>
+          <td><input type="date" id="date" name="date"  [(ngModel)]="date"></td>
+        </tr>
+        <tr>
+          <td>Hour</td>
+          <td><input type="time" id="appt" name="appt" [(ngModel)]="time"></td>
+        </tr>
+      </tbody>
+    </table>
+    <button id="addSlot" (click)="addSlot()">Add slots</button>
+  </div>
+  </div>
+
+</div>

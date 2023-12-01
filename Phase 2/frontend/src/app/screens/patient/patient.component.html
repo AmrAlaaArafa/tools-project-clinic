@@ -1,0 +1,86 @@
+<div id="main-div" class="container">
+  <div id="header-div" class="container">
+    <button id="close-button" (click)="signInForm()" type="button">
+      &times;
+    </button>
+    <p id="headertext">Hello {{ patient }} (User Type: Patient)</p>
+    <p>My Appointments</p>
+    <table id="slotTable">
+      <tbody>
+        <tr>
+          <th colspan="2">Appointment</th>
+          <th>Doctor</th>
+          <th colspan="2">Action</th>
+        </tr>
+        <!-- ? THE OUTER FOR EACH LOOP WILL INCREMENT ON EACH ITEM IN THE DB -->
+        <tr *ngFor="let a of fakeArray; let indi = index">
+          <!-- ? THE INNER FOR EACH LOOP WILL INCREMENT ON EACH COLUMN IN THE DB -->
+          <td>{{ reservedSlots.slots[indi].date }}</td>
+          <td>{{ reservedSlots.slots[indi].hour }}</td>
+          <td>DR. {{ reservedSlots.doctors[indi].name }}</td>
+          <!-- ? THE EDIT button-->
+          <!-- <td>{{item.id}}</td> -->
+          <td>
+            <button id="click" (click)="editpt(reservedSlots.slots[indi].id)">
+              Edit
+            </button>
+          </td>
+          <!-- ? THE CANCEL button-->
+          <td>
+            <button id="click" (click)="cancelpt(reservedSlots.slots[indi].id)">
+              Cancel
+            </button>
+          </td>
+          <!-- <td>{{item.id}}</td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="container">
+    <p id="cna1">Create new Appointment</p>
+    <p id="cna2" hidden>Edit Reservation</p>
+    <div id="tablediv">
+      <table id="slotTable">
+        <tbody>
+          <tr>
+            <td>Choose Doctor</td>
+            <td>
+              <select
+                #select
+                (change)="onSelectedDoc(select.value)"
+                id="doctor"
+                name="doctor"
+              >
+                <option value="default" hidden>Select Doctor</option>
+                <option *ngFor="let doc of doctors" [value]="doc.id">
+                  {{ doc.name }}
+                </option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Appointment</td>
+            <td>
+              <select
+                id="doctor"
+                #newOptin
+                (change)="onSelectedApt(newOptin.value)"
+                name="doctor"
+              >
+                <option selected disabled>Select Appointment</option>
+                <option *ngFor="let slot of slots" [value]="slot.id">
+                  {{ slot.hour }} - {{ slot.date }}
+                </option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button (click)="applyChange()" id="applyChange" hidden>Apply</button>
+      <button (click)="reserve()" id="addSlot">Reserve</button>
+    </div>
+  </div>
+</div>
