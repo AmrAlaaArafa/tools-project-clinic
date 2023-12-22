@@ -1,0 +1,146 @@
+#main-div {
+  border-radius: 6px;
+  margin: auto;
+  margin-top: 10%;
+  height: auto;
+  width: 400px;
+  background-color: #161b21;
+  align-items: center;
+}
+#close-button {
+  border: none;
+  background: none;
+  color: red;
+  cursor: pointer;
+  font-size: 30px;
+  float: right;
+}
+#headertext {
+  padding-top: 10px;
+}
+#headerlabel {
+  color: white;
+  font-family: Arial;
+}
+
+tr,
+th,
+td,
+table,
+tbody {
+  color: white;
+}
+
+#tablediv {
+  text-align: center;
+}
+
+#slotTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+#slotTable td,
+#slotTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#slotTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #161b21;
+  color: white;
+}
+a,
+a:visited,
+a:hover,
+a:active {
+  color: #407bd0;
+}
+
+#addSlot {
+  background-color: #238636;
+  color: white;
+  padding: 14px 20px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 6px;
+  margin-right: 5px;
+}
+
+#CheckNotification {
+  background-color: #238636;
+  color: white;
+  padding: 14px 15px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 6px;
+  margin-left: 5px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+tr,
+th,
+td,
+table,
+tbody {
+  color: white;
+}
+
+#slotTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  /* ?If you want it to take the whole width */
+  /* width: 100%; */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#slotTable td,
+#slotTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+/* ? if you want to alternate color */
+/* #slotTable tr:nth-child(even){background-color: #161b21;} */
+
+/* ?if you want to change color when hovering */
+/* #slotTable tr:hover {background-color: #ddd;} */
+
+#slotTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #161b21;
+  color: white;
+}
+a,
+a:visited,
+a:hover,
+a:active {
+  color: #407bd0;
+}
+
+#click {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #407bd0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: #407bd0;
+  font-size: 16px;
+}

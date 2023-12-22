@@ -1,0 +1,61 @@
+<form
+  (ngSubmit)="signUp()"
+  id="signup-form"
+  action="/action_page.php"
+  method="post"
+>
+  <div id="main-div" class="container">
+    <label for="email"><b>Email</b></label>
+    <input
+      type="text"
+      name="email"
+      placeholder="Enter Email"
+      [(ngModel)]="email"
+      required
+    />
+
+    <label for="name"><b>Name</b></label>
+    <input
+      type="text"
+      name="name"
+      placeholder="Enter Name"
+      [(ngModel)]="name"
+      required
+    />
+
+    <label for="psw"><b>Password</b></label>
+    <input
+      style="margin-bottom: 10px"
+      type="password"
+      placeholder="Enter Password"
+      name="password"
+      [(ngModel)]="password"
+      required
+    />
+
+    <div style="margin: 10px">
+      <label style="padding-right: 10px" for="psw"><b>User Type</b></label>
+      <span *ngFor="let tip of types">
+        <input
+          type="radio"
+          id="{{ tip.id }}"
+          value="{{ tip.value }}"
+          name="type"
+          [(ngModel)]="type"
+        />
+        <label style="padding-right: 10px" for="{{ tip.value }}">{{
+          tip.value
+        }}</label>
+      </span>
+    </div>
+
+    <button type="submit">Sign up</button>
+  </div>
+
+  <div class="container" style="text-align: center">
+    <label class="psw"
+      >Already have an account?
+      <a href="javascript:void(0);" (click)="navToSignIn()">Sign in</a></label
+    >
+  </div>
+</form>
