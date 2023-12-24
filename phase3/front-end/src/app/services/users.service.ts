@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UsersService {
-  static url= "http://localhost:8000"
+  static url= "https://backend-nadamaged-dev.apps.sandbox-m3.1530.p1.openshiftapps.com"
   static signupEndPoint = "/signUp"
   static loginEndPoint="/signIn"
   static addslotEndPoint="/addSlot"  
